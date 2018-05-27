@@ -2,4 +2,4 @@
 
 To run
 
-`python3 sentence_from_line.py -f sentences.txt`
+`python3  words_from_sentences.py -f data.txt`
