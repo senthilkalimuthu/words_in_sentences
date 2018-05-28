@@ -9,11 +9,11 @@ def parse_args():
 
 
 def main():
-    data = input()
+    # data = input()
     args = parse_args()
     sentence_terminators = ('.', '!', '?')
-    # with open(args.file) as f:
-    #     data = f.readlines()
+    with open(args.file) as f:
+        data = f.readlines()
 
     abbreviations = ['Mr.', 'Mrs.', 'Ms.', 'Dr.', 'Sr.', 'i.e.', 'e.g.']  # etc.,
 
@@ -34,9 +34,6 @@ def main():
 
             if end_of_line:
                 sentence_number += 1
-
-
-
 
     for word, sentence_number in visited_words.items():
         print("{}: {}".format(word, ','.join(str(i) for i in sentence_number) ))
